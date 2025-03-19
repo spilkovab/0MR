@@ -49,7 +49,7 @@ def weight(measurement, particle):
     '''
     x, y, f = particle
     d = np.sqrt((x-2)**2 + (y-0)**2) # Distance from the tree on position [2,0] -- TODO: add tree list
-    return 1/abs(d - measurement)
+    return 1/np.abs(d - measurement)
 
 def resampling(particles, weights, samples=10):
     '''
@@ -98,8 +98,6 @@ if __name__ == '__main__':
         plt. plot([x, x +0.02*np.cos(f)], [y, y+0.02*np.sin(f)], 'b-')
         x, y, f = real_state
         plt.plot(x, y, 'g*')
-    # x, y, f = motion_mdl(initial_state)
-    # plt.plot([x, x +0.02*np.cos(f)], [y, y+0.02*np.sin(f)], 'b-')
 
     plt.axis('square')
     plt.show()

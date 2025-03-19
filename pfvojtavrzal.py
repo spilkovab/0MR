@@ -24,7 +24,7 @@ def update_robot(real_state):
 def weight(measurement, particle):
     x, y, f = particle
     d = np.sqrt((x-2)**2 + (y-0)**2) # prekazka na pozici [2, 0]
-    e = d -measurement
+    e = d - measurement
     return 1/np.abs(e) + 1/f
 
 def resampling(state_space, state_weights, __samples = 10):
