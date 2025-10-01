@@ -1,1 +1,1 @@
-# 0MR
+# Mobile robotics class repo
